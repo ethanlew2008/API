@@ -9,7 +9,7 @@ const client = require('mongoose');
 const uri = "mongodb+srv://lbuser:1234@cluster0.fdywk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 client.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-app.listen(1337,()=>{
+app.listen(5000,()=>{
     console.log("Server Started");
 })
 
