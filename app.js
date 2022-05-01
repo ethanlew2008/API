@@ -19,15 +19,16 @@ app.get("/",(req,res)=>{
     res.send("Hello");
 })
 
-app.get("/lb",(req,res)=>{
+app.get("/lb",async(req,res)=>{
 
     console.log(req.query.name);
-    res.send("Pretend I am Retuning A Users Profile");
+    let result = await Profile.find({});
+    res.send(result); 
 })
 
 app.post("/lb",(req,res)=>{
 
-    let newprofile = Profile();
+    let newprofile = new Profile();
     newprofile.Name = req.body.profile.name;
     newprofile.Age = req.body.profile.age;
     newprofile.save();
