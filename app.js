@@ -29,8 +29,8 @@ app.get("/lb",async(req,res)=>{
 app.post("/lb",(req,res)=>{
 
     let newprofile = new Profile();
-    newprofile.Name = req.body.profile.name;
-    newprofile.Age = req.body.profile.age;
+    newprofile.Name = req.body.Name;
+    newprofile.Age = req.body.Age;
     newprofile.save();
     
 
